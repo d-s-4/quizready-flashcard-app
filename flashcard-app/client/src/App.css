@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #edf6df 0%, #f8fafc 100%);
+  color: #1f2937;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px 20px 60px;
+  text-align: center;
+}
+
+/* Brand Header */
+.brand-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.logo-mark {
+  position: relative;
+  width: 72px;
+  height: 72px;
+}
+
+.card-stack {
+  position: absolute;
+  width: 48px;
+  height: 60px;
+  border-radius: 12px;
+  border: 2px solid #1b3a0b;
+  background: white;
+  box-shadow: 0 8px 20px rgba(27, 58, 11, 0.15);
+}
+
+.back-card {
+  top: 10px;
+  left: 18px;
+  background: #b6e000;
+}
+
+.middle-card {
+  top: 5px;
+  left: 10px;
+  background: #84c600;
+}
+
+.front-card {
+  top: 0;
+  left: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8fff0;
+}
+
+.tick {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1b3a0b;
+}
+
+.app h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+.brand-quiz {
+  color: #1b3a0b;
+}
+
+.brand-ready {
+  color: #84c600;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+/* Form */
+.form {
+  max-width: 950px;
+  margin: 0 auto 24px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(27, 58, 11, 0.08);
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  backdrop-filter: blur(8px);
+}
+
+.form input {
+  flex: 1 1 220px;
+  max-width: 280px;
+  padding: 14px 16px;
+  border: 1px solid #cfe6a7;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  outline: none;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form input:focus {
+  border-color: #84c600;
+  box-shadow: 0 0 0 4px rgba(132, 198, 0, 0.16);
+}
+
+.form button {
+  padding: 14px 18px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6b8e00, #84c600);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+.form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(107, 142, 0, 0.22);
+}
+
+.form button:active {
+  transform: translateY(0);
+}
+
+/* Top actions */
+.top-actions {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.top-actions button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  background: #1b3a0b;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.top-actions button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* Stats */
+.stats {
+  margin-bottom: 26px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  min-width: 140px;
+  padding: 14px 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(27, 58, 11, 0.06);
+  border-top: 4px solid #84c600;
+}
+
+.stat-box h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #1b3a0b;
+}
+
+.stat-box p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* Card layout */
+.card-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 22px;
+  padding: 22px;
+  text-align: left;
+  box-shadow: 0 12px 30px rgba(27, 58, 11, 0.08);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: linear-gradient(90deg, #1b3a0b, #6b8e00, #b6e000);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 34px rgba(27, 58, 11, 0.12);
+}
+
+.card-content {
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+.card-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #edf6df;
+  color: #3f5f00;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.card h3 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #1b3a0b;
+}
+
+.answer-box {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: #f7fce8;
+  border: 1px solid #dceab7;
+}
+
+.answer-box p {
+  margin: 0 0 12px;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.card input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px 14px;
+  border: 1px solid #cbd5b1;
+  border-radius: 12px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.card input:focus {
+  border-color: #84c600;
+  box-shadow: 0 0 0 4px rgba(132, 198, 0, 0.16);
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.18s ease, opacity 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 6px 14px rgba(27, 58, 11, 0.08);
+}
+
+.card button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.mark-used-btn {
+  background: #84c600;
+  color: white;
+}
+
+.edit-btn {
+  background: #6b8e00;
+  color: white;
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.save-btn {
+  background: #3f5f00;
+  color: white;
+  width: 100%;
+}
+
+/* Empty state */
+.empty-state {
+  max-width: 520px;
+  margin: 40px auto 0;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 12px 30px rgba(27, 58, 11, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.empty-state h2 {
+  margin-top: 0;
+  color: #1b3a0b;
+}
+
+.empty-state p {
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .app h1 {
+    font-size: 2rem;
+  }
+
+  .form {
+    padding: 18px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .logo-mark {
+    width: 62px;
+    height: 62px;
+  }
+
+  .card-stack {
+    width: 42px;
+    height: 54px;
+  }
+
+  .tick {
+    font-size: 1.5rem;
+  }
+}
